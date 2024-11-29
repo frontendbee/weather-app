@@ -73,3 +73,8 @@ img {
   width: 30.48px;
   text-align: left;
 }
+
+.pastHours{
+  /* background-color: #cecece; */
+  display: none;
+}

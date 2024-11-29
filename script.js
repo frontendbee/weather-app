@@ -64,12 +64,18 @@ function fillThePopup(latitude, longitude, weatherData) {
     `
     let hoursToDisplay = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23];
 
+    let timeNow = new Date();
+    // let seconds = parseInt(timeNow.getSeconds().toString().padStart(2, '0'), 10)
+    let timeNowFormatted = timeNow.getHours() +':' + timeNow.getMinutes();
+    // console.log(timeNowFormatted)
+
     hoursToDisplay.forEach(index => {
         let hour = today.hours[index];
         let hourFormatted = hour.datetime.split(':').slice(0, 2).join(':');
+        pastHours = hourFormatted > timeNowFormatted ? '' : 'pastHours';
 
         content += `
-            <div class="divToday_hour">
+            <div class="divToday_hour ${pastHours}">
              <p>${hourFormatted}</p>
              <img src="./img/icons/${hour.icon}.svg" alt="${hour.icon}" />
              <p class="divToday_hour_conditions">${hour.conditions}</p>
