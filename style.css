@@ -1,0 +1,75 @@
+
+/* reset css */
+@import "modern-normalize";
+
+:root {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol[role="list"], ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* css */
+#map { 
+    height: 100vh;
+    width: 100vw; 
+}
+
+.divToday{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 180px;
+}
+
+.sunrisesunset{
+  font-size: large;
+  margin: 0px;
+  /* width: fit-content; */
+}
+
+.divToday_hour{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.divToday_hour > img{
+  width: 30px;
+}
+
+.divToday_hour_conditions{
+  font-size: smaller;
+  width: 45px;
+}
+
+.divToday_hour_temp{
+  width: 30.48px;
+  text-align: left;
+}
